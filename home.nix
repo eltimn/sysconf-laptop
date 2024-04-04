@@ -8,6 +8,7 @@ in {
     stateVersion = "23.11";
 
     packages = with pkgs; [
+      enpass
       filen
       ffmpeg
       git
@@ -15,6 +16,7 @@ in {
       firefox
       gnome.gnome-tweaks
       libnotify
+      gnomeExtensions.appindicator
       gnumake
       neovim
       nixfmt
@@ -72,6 +74,16 @@ in {
       enableZshIntegration = true;
     };
 
+    kitty = {
+      enable = true;
+      font = {
+        name = "DejaVu Sans";
+        size = 14;
+      };
+      shellIntegration.enableZshIntegration = true;
+      theme = "Github";
+    };
+
     tmux = {
       enable = true;
       keyMode = "vi";
@@ -106,6 +118,8 @@ in {
       };
     };
   };
+
+  # services.dropbox.enable = true;
 
   xdg.desktopEntries = {
     filen = {

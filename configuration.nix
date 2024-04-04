@@ -14,8 +14,6 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "lappy";
-  networking.wireless.enable =
-    true; # Enables wireless support via wpa_supplicant.
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -99,7 +97,7 @@
   # services.xserver.libinput.enable = true;
 
   # Define a user account.
-  users.users.${username} = {
+  users.users.nelly = {
     isNormalUser = true;
     description = "Tim Nelson";
     extraGroups = [ "wheel" "networkmanager" ];

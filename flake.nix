@@ -15,7 +15,7 @@
       username = "nelly";
     in {
       nixosConfigurations = {
-        workstation = nixpkgs.lib.nixosSystem {
+        laptop = nixpkgs.lib.nixosSystem {
           inherit system;
           specialArgs = { inherit inputs; };
           modules = [
